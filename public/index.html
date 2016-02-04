@@ -1,0 +1,61 @@
+<html>
+  	<head>
+    	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    	<title>gauges</title>
+		
+		<style>
+		
+			body{
+			  	font: 10px arial;
+			}
+			#main{
+				width: 80%;
+				height: 100%;
+				position: fixed;
+				left: 20%;
+				overflow: auto;
+			}
+			#filter{
+				width: 20%;
+				height: 100%;
+				position: fixed;
+				left: 0%;
+				overflow: auto;
+			}
+			#main #loader{
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+		<script type="text/javascript" src="gauge.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		
+	</head>
+	
+	<body>
+		<div id="filter">
+			<div id="pane">
+				<button onclick="filter()">Filter</button>
+				<button onclick="clearFilters()">Clear</button>
+				<div id="attributes">
+					<h4>Attributes</h4>
+					<ul>
+					</ul>
+				</div>
+				<div id="metrics">
+					<h4>Metrics</h4>
+					<ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="loader">
+				<p><img src="285.gif"/></p>
+				<p><span class="msg">Loading master data...</span></p>
+			</div>
+		</div>
+	</body>
+	
+</html>
